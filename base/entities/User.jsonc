@@ -1,0 +1,48 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "student",
+        "supervisor",
+        "admin",
+        "user"
+      ],
+      "default": "student"
+    },
+    "portal": {
+      "type": "string",
+      "enum": [
+        "student",
+        "supervisor"
+      ],
+      "description": "Which portal the user registered through (set on self-registration)."
+    },
+    "phone": {
+      "type": "string"
+    },
+    "department_id": {
+      "type": "string"
+    },
+    "registration_number": {
+      "type": "string"
+    },
+    "staff_id": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "role"
+  ]
+}

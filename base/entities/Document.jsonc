@@ -1,0 +1,66 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "proposal",
+        "chapter",
+        "chapter_set",
+        "abstract",
+        "other"
+      ],
+      "default": "chapter"
+    },
+    "chapter_number": {
+      "type": "number"
+    },
+    "chapter_range": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "student_id": {
+      "type": "string"
+    },
+    "supervisor_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "under_review",
+        "approved",
+        "rejected",
+        "revision"
+      ],
+      "default": "pending"
+    },
+    "version": {
+      "type": "number",
+      "default": 1
+    },
+    "supervisor_comment": {
+      "type": "string"
+    },
+    "approved_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "file_url",
+    "student_id"
+  ]
+}

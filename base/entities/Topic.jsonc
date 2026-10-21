@@ -1,0 +1,43 @@
+{
+  "name": "Topic",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "objectives": {
+      "type": "string"
+    },
+    "student_id": {
+      "type": "string"
+    },
+    "supervisor_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "supervisor_comment": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "student_id"
+  ]
+}
