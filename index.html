@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartSupervise - University Project Supervision</title>
+    <!-- Suppress platform branding badges -->
+    <style>
+      #base44-edit-badge,
+      .base44-badge,
+      [id*="base44-edit"],
+      [id*="base44-badge"],
+      [class*="base44-badge"],
+      [data-base44],
+      a[href*="base44.com"],
+      a[href*="base44.app"],
+      iframe[src*="base44"] {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        z-index: -99999 !important;
+      }
+    </style>
+    <script>
+      (function() {
+        function removeBadges() {
+          const targets = document.querySelectorAll(
+            '#base44-edit-badge, .base44-badge, [id*="base44-edit"], [id*="base44-badge"], [class*="base44-badge"], [data-base44], a[href*="base44.com"], a[href*="base44.app"]'
+          );
+          targets.forEach(function(el) { el.remove(); });
+        }
+        if (typeof document !== 'undefined') {
+          document.addEventListener('DOMContentLoaded', removeBadges);
+          const observer = new MutationObserver(removeBadges);
+          observer.observe(document.documentElement, { childList: true, subtree: true });
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
